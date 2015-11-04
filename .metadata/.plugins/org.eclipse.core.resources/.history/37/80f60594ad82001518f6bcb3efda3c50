@@ -1,0 +1,53 @@
+package com.crossword.objects;
+
+import java.util.*;
+
+public class Word {
+	private String word;
+	private List<String> clueCollection; // clues are case-sensitive
+	
+	/**
+	 * Creates a new Word object.
+	 * @param word - A String for the word
+	 * @param clue - A String for the clue associated to the word
+	 */
+	public Word(String word, String clue)
+	{
+		this.word = word;
+		this.clueCollection = new ArrayList<String>();
+		this.clueCollection.add(clue);
+	}
+	
+	public Word(String word, List<String> clueCollection)
+	{
+		this.word = word;
+	}
+	
+	public Word getObject()
+	{
+		return this;
+	}
+	
+	public String getWord()
+	{
+		return word;
+	}
+	
+	public List<String> getClues()
+	{
+		return clueCollection;
+	}
+	
+	public String getRandomClue()
+	{
+		Random rand = new Random();
+		
+		return "";
+	}
+	
+	public void addClue(String word, String clue)
+	{
+		if (this.word == word && !clueCollection.contains(clue))
+			clueCollection.add(clue);
+	}
+}

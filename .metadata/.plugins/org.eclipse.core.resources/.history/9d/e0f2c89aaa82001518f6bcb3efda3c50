@@ -1,0 +1,5 @@
+package com.crossword.objects;
+
+public class Word {
+
+}
